@@ -1,74 +1,272 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="utf-8">
-  <title>Alan Saji</title>
-  <script src="https://kit.fontawesome.com/1bef496e4a.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/styles2.css">
-  <link rel="icon" href="favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat+Alternates&family=Sacramento&display=swap" rel="stylesheet">
-</head>
+    <!--CSS Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
-<body>
-  <div class="top-container">
-    <img class="birds" src="https://cdn-icons-png.flaticon.com/512/38/38384.png" alt="bird image">
-    <img class="top-cloud" src="images/cloud.png" alt="cloud image">
-    <img class="plane" src="https://cdn-icons-png.flaticon.com/512/650/650953.png" alt="plane image">
-    <h1>I'm Alan Saji</h1>
-    <h2 style="font-weight: normal" ;>Computer engineer</h2>
-    <img class="bottom-cloud" src="images/cloud.png" alt="cloud image">
-    <img class="mountain" src="images/mountain.png" alt="mountain image">
-  </div>
-  <div class="middle-container">
-    <div class="profile">
-      <img width="200px" height="200px" src="https://cdn-icons-png.flaticon.com/512/4440/4440953.png" alt="alan display picture">
-      <h2>Hello.</h2>
-      <p style="width:40%" ;>I am Alan Saji and I am an aspiring web designer,developer and also a game designer,developer. This is my website I'll be putting some of my information here.</p>
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon.ico"
+    />
+
+    <!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Alan Saji |BTech Computer Engineering @ VIT</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+         <nav>
+      <h1>Alan Saji</h1>
+      <ul class="navigation">
+        <li class="show"><a href="#about" class="nav-link">About</a></li>
+        <li class="show"><a href="#skills" class="nav-link">Education</a></li>
+        <li class="show"><a href="https://drive.google.com/file/d/1s-vpZXwtnYMnviFQJDGuaHNAX0AjGnTv/view?usp=sharing" class="nav-link">Resume</a></li>
+        <li class="show"><a href="#projects" class="nav-link">Contribution</a></li>
+        <li class="show"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="burger-menu" id="burger-menu">
+        <ion-icon class="bars" name="menu-outline"></ion-icon>
+      </button>
+</nav>
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+      <a href="https://vitbhopal.ac.in/vit-bhopal/"><img
+        src="assets/images/a3.jpg"
+        alt="alan-saji"
+        loading="lazy"
+        class="hero-img"
+      /></a>
+      <div class="bio animate__animated animate__shakeX">
+        <h2 class="bio-title">About Me</h2>
+        <p class="bio-text">
+          Hey guys, I'm Alan, a sophomore in Computer Engineering with specialization on gaming technology at VIT Bhopal University.
+          I am a Web developer, and I have a keen interest in Virtual 
+          Reality and gaming technologies. Alongside crafting websites, I delve into game development
+           and the creation of machine learning models.
+           It's a journey of continuous learning and exploration in the exiting realm of technology.
+
+          
+        </p>
+      </div>
+</section>
+    <!-- More about -->
+    <section class="more-about">
+      <h2>More About Me</h2>
+      <p>
+        In the realm of web development, I've successfully executed projects utilizing HTML, 
+        CSS, and JavaScript. My proficiency extends to working with frameworks such as Bootstrap 
+        and backend frameworks including Node.js, Express, Axios, and EJS. 
+        I'm experienced in handling both REST APIs and GraphQL APIs.
+      </p>
+      
+      <p>
+        Proficient in Python programming, I've crafted GUI projects using 
+        Turtle and Tkinter. My endeavors include collaboration with various open APIs, 
+        projects involving web scraping with Beautiful Soup and Selenium WebDriver, and 
+        the creation of bots for LinkedIn, Instagram, Twitter, and Tinder. Additionally, 
+        I've worked extensively with SQLite.
+      </p>
+      
+      <p>
+        I hold a Microsoft Certification as a Power Platform App Maker (PL-100) 
+        for the years 2024-2025. Furthermore, I am recognized as an Oracle Certified Java 
+        Foundation Associate (IZ0-811).
+      </p>
+      
+    </section>
+
+    <!-- Skills section -->
+    <section class="skills" id="skills">
+      <h2 class="skill-header">My Skills</h2>
+
+      <div class="skills-wrapper">
+        <div class="first-set animate__animated animate__pulse">
+          <a href="https://www.auxiliumgirlsschool.org/"><img
+            src="assets/icons/school1.jpg"
+            alt="auxillium school"
+            loading="lazy"
+            class="icon icon-card"
+          /></a>
+          <h3 class="desc">Microsoft PowerApps</h3>
+          <a href="http://www.donboscoschoolagartala.org/"><img
+            src="assets/icons/school2.jpg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          /></a>
+          <h3 class="desc">HTML,CSS,JS</h3>
+          
+        </div>
+
+        
+      </div>
+    </section>
+    <!-- Projects section -->
+    <section class="projects" id="projects">
+      <h2 class="projects-title">Recent achievements and contribution</h2>
+      <div class="projects-container">
+        <div class="project-container project-card">
+          <img
+            src="assets/images/certificate1.png"
+            alt="Certificate1"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Certificate of Appreciation</h3>
+          <p class="project-details">
+            3rd place in Artistic digitial Poster presentation.
+          </p>
+          <a href="https://drive.google.com/file/d/1zoy2Fefh4pNL3z8EiTPv8BBGtgq4LFON/view?usp=sharing" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+          <img
+            src="assets/images/certificate2.jpg"
+            alt="certificate2"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Teachnook Intership</h3>
+          <p class="project-details">
+            Completed intership program on Nanotechnology
+          </p>
+          <a href="https://dochub.com/m/shared-document/alan-saji/Xv7zYW5RnlN0jv0V2A9egx/certificate2-jpg?dt=321zNEdHyrPyKyVGi-gE" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+          <img
+            src="assets/images/certificate3.jpg"
+            alt="certificate3"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">smartknower Internship</h3>
+          <p class="project-details">
+            Internship Completion on Genetic Engneering
+          </p>
+          <a href="https://dochub.com/m/shared-document/alan-saji/DL7JlEGV13Leq9dRrWe0oa/smart-knower-certificate-jpg?dt=wxjcvepDytYFxwDTqWcZ" target="_blank" class="project-link">Check it Out</a>
+        </div>
+      </div>
+    </section>
+    <!-- Contact section -->
+    <section class="contact" id="contact">
+      <h2>Get In Touch With Me</h2>
+      <div class="contact-form-container">
+        <div class="contact-form">
+          <form action="https://formspree.io/f/xoqozvdb" method="POST">
+            <div class="form-control">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="sender-name"
+                placeholder="Enter Your Name"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="sender-email"
+                placeholder="Enter Your Email"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                cols="60"
+                rows="10"
+                placeholder="Enter Your Message"
+                name="message"
+                class="input-field"
+                required
+              ></textarea>
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              id="submit-btn"
+              class="submit-btn"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social accounts - Fixed to the right -->
+     <div class="socials">
+      <a href="https://twitter.com/AlanSaji2003" target="_blank"
+        ><img
+          src="assets/icons/icons8-twitter-circled.gif"
+          alt="Twitter"
+          loading="lazy"
+          class="socicon"
+      /></a>
+      <a href="https://www.instagram.com/_x_alan_x._/" target="_blank"
+        ><img
+          src="assets/icons/icons8-instagram.gif"
+          alt="Instagram"
+          loading="lazy"
+          class="socicon"
+      /></a>
+      <a href="https://www.linkedin.com/in/alan-saji-b346091b6/" target="_blank"
+        ><img
+          src="assets/icons/icons8-linkedin-circled.gif"
+          alt="Linkedin"
+          loading="lazy"
+          class="socicon"
+      /></a>
+     
+    
     </div>
-    <hr>
-    <div class="skills">
-      <h2>My Skills.</h2>
-      <div class="skill-row">
-        <img width="25%" class="html" src="https://i.postimg.cc/d3Z4FxJN/Screenshot-2022-11-29-234922.png" alt="html logo">
-        <h3>Web Development</h3>
-        <p>I am currently learning web development to become a full stack developer. I have dome projects on javascript like a side scrolling game based on pure JS.</p>
-      </div>
-      <div class="skill-row">
-        <img width="25%" class="valorant" src="https://i.postimg.cc/Dw5G0Pp2/Screenshot-2022-11-29-235434.png" alt="valorantimage">
-        <h3>Valorant</h3>
-        <p>Valorant is an upcoming free-to-play multiplayer first-person shooter video game developed by Riot Games. It is the first game Riot Games has developed in the genre. I am pretty good at the game! jk silver1 XD</p>
-      </div>
-      <div class="skill-row">
-        <img class="python" width="25%" src="https://i.postimg.cc/13Kp1NQg/python-logo.png" alt="python logo">
-        <h3>PYTHON</h3>
-        <p>Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming. It is often described as a "batteries included"
-          language due to its comprehensive standard library. Know bit of python too!</p>
-      </div>
-    </div><br><br>
-    <hr>
-    <div class="contact-me">
-      <h2>Get In Touch</h2>
-      <h3>Email me on my personal mail!</h3>
-      <p>I will provide my twitter, linkedIn and github handles as well. Lets talk and have fun!</p><br><br><br>
-      <a class="btn" href="mailto:rockstaralansaji@gmil.com">EMAIL ME</a><br><br><br><br>
-    </div>
-  </div>
+    <!-- Footer section -->
+    <footer>
+        <p class="copy">&copy; Copyright 2024</p>
+        <p class="copy">
+          Built with &#x2661; by
+          <a href="https://twitter.com/AlanSaji2003" target="_blank"
+            >Alan Saji</a
+          >
+        </p>
+        </footer>
+    
 
-
-  <div class="bottom-container">
-    <a class="footer-link" href="https://www.linkedin.com/in/alan-saji-b346091b6/">LinkedIn</a>
-    <i class="fa-brands fa-linkedin"></i>
-    <a class="footer-link" href="https://twitter.com/AlanSaji2003">Twitter</a>
-    <i class="fa-brands fa-twitter"></i>
-    <a class="footer-link" href="https://alansaji2003.github.io/cv/">Website</a>
-    <i class="fa-solid fa-user"></i>
-    <a class="footer-link" href="https://github.com/Alansaji2003">Github</a>
-    <i class="fa-brands fa-github"></i>
-    <br><br>
-    <p style="color:#EAF6F6;">© Alan Saji.</p>
-  </div>
-
+    <!-- Ion icons scripts -->
+    <i class="scroll-up" id="scroll-up"
+    ><img
+      src="assets/icons/icons8-upward-arrow.gif"
+      class="socicon up-arrow"
+      alt="scroll-up"
+  /></i>
+  <!-- Website scripts -->
+  <script src="assets/js/app.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

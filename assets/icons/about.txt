@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Economica
+- Font Author: Copyright (c) 2012, Vicente Lamonaca (produccion.taller@gmail.com www.tipografia-montevideo.info www.tipotype.com)
+- Font Source: http://fonts.gstatic.com/s/economica/v15/Qw3fZQZaHCLgIWa29ZBrMcgAAl1lfQ.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
