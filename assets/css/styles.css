@@ -531,18 +531,273 @@ img {
 }
 
 /*=============== WORK ===============*/
+.work__container{
+  row-gap: 2rem;
+}
 
 
+.work__link{
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.work__img{
+filter: grayscale(1);
+transition: filter .5s, transform .5s;
+}
+
+
+.work__icon{
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 2rem;
+  color: var(--first-color);
+  transition: transform .4s;
+}
+
+.work__link:hover .work__img{
+  transform: scale(1.1);
+  filter: none;
+}
+
+.work__link:hover .work__icon{
+  transform: translate(.5rem, -5rem) rotate(-30deg);
+
+}
+
+.work__title{
+  font-size: var(--h2-font-size);
+  margin-bottom: .25rem;
+}
+
+.work__page{
+  padding-bottom: 4rem;;
+}
 /*=============== TESTIMONIAL ===============*/
+.testimonial__container{
+  position: relative;
+}
 
+.testimonial__swiper{
+  padding-bottom: 2rem;
+}
+
+
+
+.testimonial__card{
+  background-color: var(--container-color);
+  padding: 2rem 1.25rem 2.5rem 1.25rem;
+  border-inline: 8px solid var(--first-color);
+  box-shadow: 0 12px 24px var(--shadow-color);
+  text-align: center;
+  transition: background-color .4s;
+
+
+}
+
+.testimonial__border{
+  width: 100px;
+  height: 100px;
+  border: 6px solid var(--first-color);
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+
+.testimonial__img{
+  filter: grayscale(1);
+  transition: filter .4s;
+
+}
+
+.testimonial__name{
+  font-size: var(--h2-font-size);
+  margin-bottom: .5rem;
+}
+
+.testimonial__card:hover .testimonial__img{
+  filter: none;
+
+}
 
 /* Swiper class */
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom: -1rem;
 
+
+}
+
+.swiper-pagination-bullet{
+  background-color: var(--first-color-light);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: var(--first-color);
+}
 
 /*=============== CONTACT ===============*/
+.contact__container{
+  padding-bottom: 4rem;
+}
+
+.contact__button{
+  justify-self: center;
+}
+
+.contact__page{
+  padding-block: 1rem 4rem;
+}
+
+.contact__form{
+  position: relative;
+}
+
+.contact__box{
+  position: relative;
+  width: 100%;
+  height: 58px;
+}
+
+.contact__input{
+  width: 100%;
+  height: 100%;
+  background-color: var(--body-color);
+  border: 3px solid var(--text-color-light);
+  padding: .5rem 1.5rem;
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  transition: border-color .4s, background-color .4s;
+
+}
+
+.contact__input:focus{
+  border-color: var(--title-color);
+}
+
+.contact__input:-webkit-autofill{
+  transition: background-color 6000s, color 6000s;
+}
+
+.contact__label{
+  position: absolute;
+  top: -16px;
+  left: 16px;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+  background-color: var(--body-color);
+  padding: 8px;
+  transition: background-color 4s;
+
+}
 
 
+
+.contact__area{
+  height: 10rem;
+}
+
+
+.contact__area textarea{
+  resize: none;
+  padding-top: 1.25rem;
+
+}
+
+.contact__send{
+  padding-block: 1.25rem;
+
+  cursor: pointer;
+}
+
+.contact__message{
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+
+} 
 /*=============== FOOTER ===============*/
+.footer{
+  background-color: var(--first-color);
+
+}
+.footer__container{
+  padding-block: 4rem 2rem;
+  text-align: center;
+  row-gap: 5rem;
+}
+
+.footer__content{
+  row-gap: 2rem;
+}
+
+.footer__content a, .footer__copy{
+  color: var(--white-color);
+}
+
+.footer__logo{
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-semi-bold);
+  justify-self: center;
+}
+
+
+.footer__links,
+.footer__social{
+  display: flex;
+  justify-content: center;
+}
+
+.footer__links{
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+
+.footer__link{
+  font-weight: var(--font-semi-bold);
+}
+
+.footer__logo:hover,
+.footer__link:hover{
+  text-decoration: underline;
+}
+
+
+.footer__social{
+  column-gap: 1rem;
+}
+
+.footer__social-link{
+  font-size: 1.5rem;
+  transition: transform .4s;
+}
+
+.footer__social-link:hover{
+  transform: translateY(-.25rem);
+}
+
+
+.footer__copy{
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+
+
+
+
+
+
+
 
 
 /*=============== SCROLL BAR ===============*/
