@@ -29,17 +29,7 @@
   --body-color: hsl(0, 0%, 100%);
   --container-color: hsl(0, 0%, 100%);
   --shadow-color: hsla(255, 90%, 30%, .1);
-  /* --hue: #0000ff;
---first-color: #8080ff;
---first-color-alt: #7373ff;
---first-color-light: #b3b3ff;
---title-color: #1a1aff;
---text-color: #6666ff;
---text-color-light: #9999ff;
---white-color: #ffffff;
---body-color: #ffffff;
---container-color: #ffffff;
---shadow-color: #6666ffa1; */
+  
   
 
   /*========== Font and typography ==========*/
@@ -129,16 +119,50 @@ img {
 }
 
 /*=============== THEME ===============*/
+.nav__actions{
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
 
+.change-theme{
+  color:var(--white-color);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color .4s;
+}
 
 /*========== Variables Dark theme ==========*/
-
+body.dark-theme{
+  --title-color: hsl(var(--hue), 24%, 85%);
+  --text-color: hsl(var(--hue), 8%, 70%);
+  --body-color: hsl(var(--hue), 16%, 8%);
+  --container-color: hsl(var(--hue), 16%, 12%);
+  --shadow-color: hsla(var(--hue), 32%, 4%, .4);
+}
 
 /*========== 
 	Color changes in some parts of 
 	the website, in dark theme
 ==========*/
+.dark-theme .bg-header{
+  box-shadow: 0 12px 24px var(--shadow-color);
 
+}
+
+.dark-theme .services__modal{
+  background-color: hsla(var(--hue), 90%, 8%, .2);
+}
+
+.dark-theme::-webkit-scrollbar{
+  background-color: hsl(var(--hue), 16%, 15%);
+}
+.dark-theme::-webkit-scrollbar-thumb{
+  background-color: hsl(var(--hue), 16%, 25%);
+}
+.dark-theme::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(var(--hue), 16%, 35%);
+}
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -281,7 +305,7 @@ img {
   box-shadow: 0 2px 16px var(--shadow-color);
 }
 
-.bg-header :is(.nav__logo, .nav__toggle){
+.bg-header :is(.nav__logo, .nav__toggle, .change-theme){
   color: var(--title-color);
 }
 
@@ -290,7 +314,7 @@ img {
   background-color: var(--body-color);
 }
 
-.header-pages :is(.nav__logo, .nav__toggle){
+.header-pages :is(.nav__logo, .nav__toggle, .change-theme){
   color: var(--title-color);
 
 }
@@ -333,6 +357,9 @@ img {
 .home__perfil{
   justify-self: center;
 
+}
+.home__content{
+  row-gap: 3rem;
 }
 
 .home__data{
@@ -692,7 +719,7 @@ transition: filter .5s, transform .5s;
   color: var(--title-color);
   background-color: var(--body-color);
   padding: 8px;
-  transition: background-color 4s;
+  transition: background-color 0.1s;
 
 }
 
@@ -801,22 +828,288 @@ transition: filter .5s, transform .5s;
 
 
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar{
+  width: 0.6rem;
+  background-color: hsl(var(--hue),20%, 85%);
 
+}
 
+::-webkit-scrollbar-thumb{
+  background-color: hsl(var(--hue), 20%, 65%);
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(var(--hue), 20%, 55%);
+}
 /*=============== SCROLL UP ===============*/
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: var(--container-color);
+  box-shadow: 0 12px 24px var(--shadow-color);
+  display: inline-flex;
+  padding: 6px;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  z-index: var(--z-tooltip);
+  transition: bottom .4s, transform .4s, background-color .4s;
+
+}
+
+.scrollup:hover{
+  transform: translateY(-.5rem);
+}
 
 
 /* Show Scroll Up */
-
+.show-scroll{
+  bottom: 3rem;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width: 320px) {
+  .container{
+    margin-inline: 1rem;
+  }
+  .services__modal{
+    padding-inline: 0.5rem;
 
+  }
+  .about__skills-content{
+    grid-template-columns: repeat(4, max-content);
+  }
+}
 
 /* For medium devices */
+@media screen and (min-width: 576px) {
+  .services__container{
+    grid-template-columns: 320px;
+    justify-content: center;
+  }
+  .services__modal-content{
+    width: 400px;
+  }
+  .work__container{
+    grid-template-areas: 350px;
+    justify-content: center;
+  }
 
+  .about__container{
+    grid-template-columns: 400px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .services__container{
+    grid-template-columns: repeat(2, 320px);
+  }
+
+  .work__container{
+    grid-template-columns: repeat(2, 350px);
+  }
+
+  .testimonial__container{
+    max-width: 700px;
+    margin-inline: auto;
+  }
+  .testimonial__description{
+    width: 470px;
+    margin-inline:auto;
+
+  }
+
+  .contact__page{
+    grid-template-columns: 670px;
+    justify-content: center;
+  }
+
+  .contact__group{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+
+  .contact__area{
+    height: 18rem;
+  }
+  .contact__message{
+    bottom: 5rem;
+  }
+  .contact__send{
+    justify-self: center;
+    margin-top: 1.5rem;
+  }
+
+}
 
 /* For large devices */
+@media screen and (min-width: 1150px) {
+  .container{
+    margin-inline: auto;
+  }
 
+  .section{
+    padding-block: 7rem 2rem;
+  }
+  .section__title{
+    margin-bottom: 3.5rem;
+  }
+  .nav{
+    height: calc(--header-height)+2rem;
+    column-gap: 3rem;
+  }
+  .nav__toggle,
+  .nav__close{
+    display: none;
+  }
+  .nav__menu{
+    margin-left: auto;
+  }
+  .nav__list{
+    flex-direction: row;
+    align-items: center;
+    column-gap: 3rem;
+  }
+  .change-theme{
+    color: var(--title-color);
+  }
+  .perfil{
+    width: 500px;
+    height: 500px;
+    border-width: 15px;
+  }
+  .perfil__content{
+    width: 360px;
+    height: 360px;
+    border-width: 20px;
+  }
+  .perfil__img{
+    width: 300px;
+  }
+  .home__rectangle{
+    width: 30vw;
+    height: 100%;
+  }
+  .home__container{
+    position: relative;
+    grid-template-columns: 500px 300px;
+    align-items: center;
+    column-gap: 4rem;
+    padding-block: 3.5rem 8rem;
+  }
+  .home__content{
+    row-gap: 4rem;
+  }
+  .home__data{
+    row-gap: 1rem;
+    text-align: initial;
+  }
+  .home__social{
+    flex-direction: column;
+    row-gap: 1.5rem;
+    position: absolute;
+    top: -4rem;
+    bottom: 0;
+    right: 0;
+  }
+  .home__social-link{
+    color: var(--first-color);
+
+  }
+  .home__button{
+    justify-self: flex-start;
+  }
+
+  .services__container{
+    grid-template-columns: repeat(3, 345px);
+  }
+  .services__card{
+    padding-block: 4.5rem;
+  }
+  .services__modal-content{
+    max-height: 480px;
+    padding: 5.5rem 2rem;
+  }
+  .services__modal-close{
+    font-size: 2rem;
+  }
+
+  .work__container{
+    grid-template-columns: repeat(3,350px);
+    row-gap: 4rem;
+  }
+  .testimonial__card{
+    padding-block: 3rem 3.5rem;
+  }
+  .testimonial__border{
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact__container{
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    align-items: center;
+    column-gap: 25rem;
+    padding-block: 1rem 5rem;
+
+  }
+  .contact__container .section__title{
+    text-align: initial;
+    margin: 0;
+  }
+
+  .footer__container{
+    row-gap: 6rem;
+    padding-block: 3.5rem;
+  }
+  .footer__content{
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+  }
+  .footer__logo{
+    font-size: var(--h2-font-size);
+
+  }
+  .footer__link{
+    column-gap: 3rem;
+  }
+  .footer__social{
+    column-gap: 1.5rem;
+
+  }
+
+  .scrollup{
+    right: 3rem;
+  }
+
+  .about__container{
+    grid-template-columns: 500px 440px;
+    align-items: center;
+    column-gap: 8rem;
+    padding-top: 2rem;
+  }
+  .about__data{
+    row-gap: 3.5rem;
+  }
+  .about__info{
+    text-align: initial;
+  }
+  .about__button{
+    justify-self: flex-start;
+  }
+  .about__skills-title{
+    text-align: initial;
+  }
+  .about__skills-content{
+    grid-template-columns: repeat(7,max-content);
+    justify-content: initial;
+  }
+  .about__skills-img{
+    width: 40px;
+  }
+}
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
