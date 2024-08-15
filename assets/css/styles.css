@@ -18,17 +18,18 @@
       -> Click on tab (Color Conversion)
       -> Copy the color mode (HSL)
   */
-  --hue: 27;
-  --first-color: hsl(27, 90%, 60%);
-  --first-color-alt: hsl(36, 82%, 56%);
-  --first-color-light: hsl(255, 40%, 80%);
-  --title-color: hsl(54, 24%, 16%);
-  --text-color: hsl(33, 8%, 45%);
-  --text-color-light: hsl(255, 8%, 60%);
+  --hue: 255;
+  --first-color: hsl(255, 90%, 60%);
+  --first-color-alt: hsl(254, 74%, 65%);
+  --first-color-light: hsl(75, 39%, 80%);
+  --title-color: hsl(240, 24%, 16%);
+  --text-color: hsl(237, 8%, 45%);
+  --text-color-light: hsl(75, 8%, 60%);
   --white-color: hsl(0, 0%, 100%);
   --body-color: hsl(0, 0%, 100%);
   --container-color: hsl(0, 0%, 100%);
-  --shadow-color: hsla(255, 90%, 30%, .1);
+  --shadow-color: hsla(287, 90%, 30%, 0.1);
+
   
   
 
@@ -203,7 +204,7 @@ body.dark-theme{
  display: flex;
  justify-content: center;
  align-items: flex-end;
- background: linear-gradient(180deg, hsl(var(--hue), 90%, 80%),hsl(var(--hue), 90%,30%));
+ background: linear-gradient(180deg, hsl(220, 90%, 80%), hsl(220, 90%, 30%));
 }
 
 .perfil__img{
@@ -285,7 +286,7 @@ body.dark-theme{
 }
 
 .nav__link:hover{
-  color: var(--first-color);
+  color: hsl(238, 63%, 31%);
 
 }
 
