@@ -18,6 +18,73 @@
 
       <title>Alan Saji | Btech</title>
    </head>
+   <style>
+    /* Disable navbar animation on mobile */
+@media (min-width: 768px) {
+   .nav {
+      animation: slideIn 1s ease-out;
+   }
+}
+
+/* Animation Keyframes */
+@keyframes slideIn {
+   0% {
+      transform: translateX(-100%);
+      opacity: 0;
+   }
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+
+
+@keyframes slideUp {
+   0% {
+      transform: translateY(500%);
+      opacity: 0;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+/* Header Animations */
+.nav__logo, .nav__actions i {
+   animation: fadeIn 2s ease-in;
+}
+
+/* Home Section Animations */
+.home__perfil .perfil__img {
+   animation: fadeIn 2s ease-in-out;
+}
+
+.home__content {
+   animation: fadeIn 2.5s ease-in-out;
+}
+
+.home__social-link {
+   transition: transform 0.3s ease;
+   animation: slideUp 1s ease-out;
+}
+
+.home__social-link:hover {
+   transform: scale(1.2);
+}
+
+
+   </style>
    <body>
       <!--==================== HEADER ====================-->
       <header class="header" id="header">
@@ -123,10 +190,10 @@
                         <ul class="services__modal-list grid">
                            <li class="services__modal-item">
                               Building web pages with HTML,CSS,JS,
-                              Bootstrap,React.
+                              Bootstrap, React, Next.js, Tailwind CSS, SASS.
                            </li>
                            <li class="services__modal-item">
-                              Connecting with database through PostgresSQL and MongoDB.
+                              Connecting with database through PostgresSQL, MongoDB, Firebase, MySQL.
                            </li>
                            <li class="services__modal-item">
                               Developing Backend with Node.js, Express, EJS, Jinja, flask and Django.
@@ -142,7 +209,7 @@
                   <i class="ri-gamepad-fill services__icon"></i>
                   <h2 class="services__title">Game Development</h2>
                   <p class="services__description">
-                     Design and Build Games on Unity and Unreal
+                     Design and Build Games on Unity and Blender
                   </p>
                   <button class="services__button button">Know More</button>
                   <div class="services__modal">
@@ -153,9 +220,7 @@
                            <li class="services__modal-item">
                               Making games with Unity.
                            </li>
-                           <li class="services__modal-item">
-                              Making Games with Unreal.
-                           </li>
+                           
                            <li class="services__modal-item">
                               Modeling Assets in Blender.
                            </li>
