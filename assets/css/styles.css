@@ -19,9 +19,9 @@
       -> Copy the color mode (HSL)
   */
   --hue: 255;
-  --first-color: hsl(255, 90%, 60%);
-  --first-color-alt: hsl(254, 74%, 65%);
-  --first-color-light: hsl(75, 39%, 80%);
+  --first-color: hsl(101, 97%, 37%);
+  --first-color-alt: hsl(97, 76%, 68%);
+  --first-color-light: hsl(123, 46%, 83%);
   --title-color: hsl(240, 24%, 16%);
   --text-color: hsl(237, 8%, 45%);
   --text-color-light: hsl(75, 8%, 60%);
