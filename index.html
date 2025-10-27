@@ -20,6 +20,47 @@
    </head>
    <style>
     /* Disable navbar animation on mobile */
+    .header {
+   margin-top: 44px; 
+}
+   .announcement-bar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 9999; /* make sure it's above everything */
+   background: linear-gradient(90deg, #ff0000, #84ff32);
+   color: white;
+   text-align: center;
+   font-weight: 600;
+   padding: 12px 8px;
+   font-size: 1rem;
+   animation: slideDown 1s ease-out;
+   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+
+.announcement-bar a {
+   color: #fff;
+   text-decoration: underline;
+   margin-left: 8px;
+   transition: color 0.3s ease;
+}
+
+.announcement-bar a:hover {
+   color: #ffe14d;
+}
+
+@keyframes slideDown {
+   from {
+      transform: translateY(-100%);
+      opacity: 0;
+   }
+   to {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
 @media (min-width: 768px) {
    .nav {
       animation: slideIn 1s ease-out;
@@ -87,6 +128,10 @@
    </style>
    <body>
       <!--==================== HEADER ====================-->
+        <div class="announcement-bar">
+      🚀 My brand new portfolio is now <strong>LIVE!</strong> 🎨 
+      <a href="https://portfolio-2k25-mu.vercel.app/" target="_blank">Check it out here →</a>
+   </div>
       <header class="header" id="header">
          <nav class="nav container">
             <a href="index.html" class="nav__logo">Alan</a>
@@ -125,6 +170,7 @@
 
       <!--==================== MAIN ====================-->
       <main class="main">
+         
          <!--==================== HOME ====================-->
          <section class="home section">
             <div class="home__rectangle">
@@ -393,86 +439,7 @@
             </div>
          </section>
 
-         <!--==================== TESTIMONIAL ====================-->
-         <!-- <section class="testimonial section">
-            <h2 class="section__title">
-               What they say <br>
-               About Me?
-            </h2>
-            <div class="testimonial__container container">
-               <div class="testimonial__swiper swiper"> -->
-                  <!-- <div class="swiper-wrapper">
-
-                     <ariticle class="testimonial__card swiper-slide">
-                        <div class="testimonial__border">
-                           <img src="assets/img/testimonial-1.png" alt="" class="testimonial__img">
-                        </div>
-
-                        <h2 class="testimonial__name">Aleena</h2>
-                           <p class="testimonial__description">
-                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae nihil voluptate distinctio aliquam enim quae excepturi repellat dicta, illo voluptatum ea minima doloremque! Incidunt necessitatibus ratione quasi obcaecati odio fugiat!
-                           </p>
-                        
-                     </ariticle>
-
-                     <ariticle class="testimonial__card swiper-slide">
-                        <div class="testimonial__border">
-                           <img src="assets/img/testimonial-2.png" alt="" class="testimonial__img">
-                        </div>
-
-                        <h2 class="testimonial__name">Harsh</h2>
-                           <p class="testimonial__description">
-                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae nihil voluptate distinctio aliquam enim quae excepturi repellat dicta, illo voluptatum ea minima doloremque! Incidunt necessitatibus ratione quasi obcaecati odio fugiat!
-                           </p>
-                        
-                     </ariticle>
-
-                     <ariticle class="testimonial__card swiper-slide">
-                        <div class="testimonial__border">
-                           <img src="assets/img/testimonial-3.png" alt="" class="testimonial__img">
-                        </div>
-
-                        <h2 class="testimonial__name">Karabi</h2>
-                           <p class="testimonial__description">
-                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae nihil voluptate distinctio aliquam enim quae excepturi repellat dicta, illo voluptatum ea minima doloremque! Incidunt necessitatibus ratione quasi obcaecati odio fugiat!
-                           </p>
-                        
-                     </ariticle>
-
-                     <ariticle class="testimonial__card swiper-slide">
-                        <div class="testimonial__border">
-                           <img src="assets/img/testimonial-4.png" alt="" class="testimonial__img">
-                        </div>
-
-                        <h2 class="testimonial__name">
-                           <p class="testimonial__description">Aaditya</h2>
-                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae nihil voluptate distinctio aliquam enim quae excepturi repellat dicta, illo voluptatum ea minima doloremque! Incidunt necessitatibus ratione quasi obcaecati odio fugiat!
-                           </p>
-                        
-                     </ariticle>
-
-                  </div> -->
-               <!-- </div> -->
-
-
-               <!-- pagination -->
-               <!-- <div class="swiper-pagination"></div>
-            </div>
-         </section> -->
-
-         <!--==================== CONTACT ====================-->
-         <section class="contact section">
-            <div class="contact__container container grid">
-               <h2 class="section__title">
-                  Let's Talk <br>
-                  Business
-               </h2>
-               <a href="contact.html" class="contact__button button">Contact Me</a>
-            </div>
-         </section>
-      </main>
-
-      <!--==================== FOOTER ====================-->
+        
       <footer class="footer">
          <div class="footer__container container grid">
             <div class="footer__content grid">
